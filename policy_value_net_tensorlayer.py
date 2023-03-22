@@ -59,7 +59,7 @@ class PolicyValueNet():
         # 3-4 Add up to be the Loss function
         self.loss = self.value_loss + self.policy_loss + l2_penalty
 
-        # Define the optimizer we use for training
+        # Define the optimizer used for training
         self.learning_rate = tf.placeholder(tf.float32)
         self.optimizer = tf.train.AdamOptimizer(
             learning_rate=self.learning_rate).minimize(self.loss)
